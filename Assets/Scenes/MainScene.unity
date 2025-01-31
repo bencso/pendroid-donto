@@ -973,6 +973,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 968020087}
     m_Modifications:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 819997888403178008, guid: d3e72ce50fec44978be75d1bb424e120, type: 3}
       propertyPath: m_SizeDelta.x
       value: 34.56
@@ -1021,6 +1024,7 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1460038737, guid: 2f7cbdca53f564e1ebf8d235c7e15777, type: 3}
+<<<<<<< Updated upstream
 =======
     - target: {fileID: 1933573511724220956, guid: d3e72ce50fec44978be75d1bb424e120, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1038,6 +1042,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     - target: {fileID: 2829818364381315178, guid: d3e72ce50fec44978be75d1bb424e120, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5298,8 +5304,13 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1901531763
 GameObject:
+=======
+--- !u!114 &1831699928
+MonoBehaviour:
+>>>>>>> Stashed changes
 =======
 --- !u!114 &1831699928
 MonoBehaviour:
@@ -5312,6 +5323,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   serializedVersion: 6
@@ -5479,6 +5491,8 @@ SpriteRenderer:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1831699926}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5490,6 +5504,9 @@ SpriteRenderer:
   droids: []
   gameTerrain: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
