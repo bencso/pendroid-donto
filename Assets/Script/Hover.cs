@@ -9,6 +9,7 @@ public class Hover : MonoBehaviour {
     // Start is called before the first frame update
 
     public Tilemap tilemap;
+    public GameObject[] rowStarts;
 
     void Start()
     {
@@ -27,7 +28,20 @@ public class Hover : MonoBehaviour {
             {
                 if(validY.Contains(cell.y))
                 {
-                    tilemap.SetTile(new Vector3Int(-11, cell.y, 0), Droidplace.selectedTile);
+                    int index = validY.ToList().IndexOf(cell.y);
+                    Debug.Log(index);
+                    for (int i = 0; i < rowStarts.Length; i++)
+                    {
+                        if (i == index)
+                        {
+                            rowStarts[i].SetActive(true);
+                        }
+                        else
+                        {
+                            rowStarts[i].SetActive(false);
+                        }
+                    }
+                    
                 }
             }
         }
