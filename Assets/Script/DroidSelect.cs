@@ -1,23 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DroidSelect : MonoBehaviour
 {
     public static DroidSelect Instance;
 
-    public GameObject droid1;
-    public GameObject droid2;
+    public Image lastSelectedButton;
 
     public enum Droids
     {
         Melee,
         Range,
         Tank,
-        Assasin
+        Assassin,
+        none
     }
 
-    public Droids selectedDroid;
+    public Droids selectedDroid = Droids.none;
 
 
     private void Awake()
@@ -25,26 +26,78 @@ public class DroidSelect : MonoBehaviour
         Instance = this;
     }
 
-    public void SelectDoid(Droids droid)
+    public void SelectMelee(Image buttonImage)
     {
-        switch (droid)
+        if (selectedDroid == Droids.Melee)
         {
-            case Droids.Melee:
-                selectedDroid = Droids.Melee;
-                break;
-
-            case Droids.Range:
-                selectedDroid = Droids.Range;
-                break;
-
-            case Droids.Tank:
-                selectedDroid = Droids.Tank;
-                break;
-
-            case Droids.Assasin:
-                selectedDroid = Droids.Assasin;
-                break;
-
+            ResetSelection();
+            return;
         }
+        else
+        {
+            ResetSelection();
+        }
+
+        selectedDroid = Droids.Melee;
+        buttonImage.color = Color.yellow;
+        lastSelectedButton = buttonImage;
+    }
+
+    public void SelectRange(Image buttonImage)
+    {
+        if (selectedDroid == Droids.Range)
+        {
+            ResetSelection();
+            return;
+        }
+        else
+        {
+            ResetSelection();
+        }
+
+        selectedDroid = Droids.Range;
+        buttonImage.color = Color.yellow;
+        lastSelectedButton = buttonImage;
+    }
+
+    public void SelectTank(Image buttonImage)
+    {
+        if (selectedDroid == Droids.Tank)
+        {
+            ResetSelection();
+            return;
+        }
+        else
+        {
+            ResetSelection();
+        }
+
+        selectedDroid = Droids.Tank;
+        buttonImage.color = Color.yellow;
+        lastSelectedButton = buttonImage;
+    }
+
+    public void SelectAssassin(Image buttonImage)
+    {
+        if (selectedDroid == Droids.Assassin)
+        {
+            ResetSelection();
+            return;
+        }
+        else
+        {
+            ResetSelection();
+        }
+
+        selectedDroid = Droids.Assassin;
+        buttonImage.color = Color.yellow;
+        lastSelectedButton = buttonImage;
+    }
+
+    public void ResetSelection()
+    {
+        selectedDroid = Droids.none;
+        if (lastSelectedButton != null) lastSelectedButton.color = Color.white;
+        lastSelectedButton = null;
     }
 }
