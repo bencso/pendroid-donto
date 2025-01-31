@@ -974,6 +974,9 @@ PrefabInstance:
     m_Modifications:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     - target: {fileID: 819997888403178008, guid: d3e72ce50fec44978be75d1bb424e120, type: 3}
@@ -1025,6 +1028,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1460038737, guid: 2f7cbdca53f564e1ebf8d235c7e15777, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
     - target: {fileID: 1933573511724220956, guid: d3e72ce50fec44978be75d1bb424e120, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1042,6 +1046,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -5305,8 +5311,13 @@ Transform:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1901531763
 GameObject:
+=======
+--- !u!114 &1831699928
+MonoBehaviour:
+>>>>>>> Stashed changes
 =======
 --- !u!114 &1831699928
 MonoBehaviour:
@@ -5323,6 +5334,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -5493,6 +5505,8 @@ SpriteRenderer:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1831699926}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5505,6 +5519,9 @@ SpriteRenderer:
   gameTerrain: {fileID: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
