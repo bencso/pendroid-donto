@@ -106,10 +106,18 @@ public class Hover : MonoBehaviour
 
             case DroidSelect.Droids.Assassin:
                 droidAssassin.SetActive(active);
+                droidMelee.SetActive(false);
+                droidRanged.SetActive(false);
+                droidTank.SetActive(false);
+                droidPendroid.SetActive(false);
                 break;
 
             case DroidSelect.Droids.Pendroid:
                 droidPendroid.SetActive(active);
+                droidMelee.SetActive(false);
+                droidRanged.SetActive(false);
+                droidTank.SetActive(false);
+                droidAssassin.SetActive(false);
                 break;
 
         }
