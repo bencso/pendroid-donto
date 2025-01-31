@@ -19,10 +19,8 @@ public class DroidPlace : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 Vector2 touchPosition = touch.position;
-                Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-
-                if (hit.collider != null && hit.collider.CompareTag("Droid"))
+                Debug.Log(touchPosition);
+                if(touchPosition.x < 285)
                 {
                     return;
                 }
