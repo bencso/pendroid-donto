@@ -47,7 +47,8 @@ public class Hover : MonoBehaviour
                             if (DroidSelect.Instance.selectedDroid != Droids.none)
                             {
                                 rowStarts[i].SetActive(true);
-                                droidHolder.transform.position = new Vector3(rowStarts[i].transform.position.x, rowStarts[i].transform.position.y + 1, 0);
+                                rowStarts[i].transform.position = new Vector3(rowStarts[i].transform.position.x, rowStarts[i].transform.position.y, 0);
+                                droidHolder.transform.position = new Vector3(rowStarts[i].transform.position.x, rowStarts[i].transform.position.y+0.5F, 0);
                                 SelectSprite(DroidSelect.Instance.selectedDroid, true);
                             }
 
@@ -109,6 +110,7 @@ public class Hover : MonoBehaviour
         switch (droid)
         {
             case DroidSelect.Droids.Melee:
+                droidMelee.transform.position = new Vector3(droidHolder.transform.position.x, droidHolder.transform.position.y, 0);
                 droidMelee.SetActive(active);
                 droidAssassin.SetActive(false);
                 droidRanged.SetActive(false);
@@ -117,6 +119,7 @@ public class Hover : MonoBehaviour
                 break;
 
             case DroidSelect.Droids.Range:
+                droidRanged.transform.position = new Vector3(droidHolder.transform.position.x, droidHolder.transform.position.y, 0);
                 droidRanged.SetActive(active);
                 droidMelee.SetActive(false);
                 droidAssassin.SetActive(false);
@@ -125,6 +128,7 @@ public class Hover : MonoBehaviour
                 break;
 
             case DroidSelect.Droids.Tank:
+                droidTank.transform.position = new Vector3(droidHolder.transform.position.x, droidHolder.transform.position.y, 0);
                 droidTank.SetActive(active);
                 droidMelee.SetActive(false);
                 droidAssassin.SetActive(false);
@@ -133,6 +137,7 @@ public class Hover : MonoBehaviour
                 break;
 
             case DroidSelect.Droids.Assassin:
+                droidAssassin.transform.position = new Vector3(droidHolder.transform.position.x, droidHolder.transform.position.y, 0);
                 droidAssassin.SetActive(active);
                 droidMelee.SetActive(false);
                 droidRanged.SetActive(false);
@@ -141,6 +146,7 @@ public class Hover : MonoBehaviour
                 break;
 
             case DroidSelect.Droids.Pendroid:
+                droidPendroid.transform.position = new Vector3(droidHolder.transform.position.x, droidHolder.transform.position.y, 0);
                 droidPendroid.SetActive(active);
                 droidMelee.SetActive(false);
                 droidRanged.SetActive(false);
