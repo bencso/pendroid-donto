@@ -13,6 +13,6 @@ public class DroidManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.transform.position = new Vector3(this.transform.position.x+0.001f, this.transform.position.y, 0);
     }
 }
