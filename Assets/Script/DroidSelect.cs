@@ -15,6 +15,7 @@ public class DroidSelect : MonoBehaviour
         Range,
         Tank,
         Assassin,
+        Pendroid,
         none
     }
 
@@ -90,6 +91,23 @@ public class DroidSelect : MonoBehaviour
         }
 
         selectedDroid = Droids.Assassin;
+        buttonImage.color = Color.yellow;
+        lastSelectedButton = buttonImage;
+    }
+
+    public void SelectPendroid(Image buttonImage)
+    {
+        if (selectedDroid == Droids.Pendroid)
+        {
+            ResetSelection();
+            return;
+        }
+        else
+        {
+            ResetSelection();
+        }
+
+        selectedDroid = Droids.Pendroid;
         buttonImage.color = Color.yellow;
         lastSelectedButton = buttonImage;
     }

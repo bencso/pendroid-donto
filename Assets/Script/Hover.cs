@@ -4,12 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 using System.Linq;
+using static DroidSelect;
 
 public class Hover : MonoBehaviour {
     // Start is called before the first frame update
 
     public Tilemap tilemap;
     public GameObject[] rowStarts;
+    public GameObject droidHolder;
+    public GameObject droidMelee;
+    public GameObject droidRanged;
+    public GameObject droidTank;
+    public GameObject droidAssassin;
+    public GameObject droidPendroid;
 
     void Start()
     {
@@ -34,16 +41,58 @@ public class Hover : MonoBehaviour {
                     {
                         if (i == index)
                         {
-                            rowStarts[i].SetActive(true);
+                            if (DroidSelect.Instance.selectedDroid != Droids.none)
+                            {
+                                rowStarts[i].SetActive(true);
+                                droidHolder.transform.position = rowStarts[i].transform.position;
+                            }
+
                         }
                         else
                         {
                             rowStarts[i].SetActive(false);
                         }
                     }
-                    
+
+                    if(touch.phase == TouchPhase.Ended)
+                    {
+                        for(int i = 0; i < rowStarts.Length; i++)
+                        {
+                            rowStarts[i].SetActive(false);
+                        }
+
+
+                    }
+
                 }
             }
+        }
+    }
+
+    private void SelectSprite(DroidSelect.Droids droid, bool active)
+    {
+        switch (droid)
+        {
+            case DroidSelect.Droids.Melee:
+                droidMelee.SetActive(active);
+                break;
+
+            case DroidSelect.Droids.Range:
+                droidRanged.SetActive(active);
+                break;
+
+            case DroidSelect.Droids.Tank:
+                droidTank.SetActive(active);
+                break;
+
+            case DroidSelect.Droids.Assassin:
+                droidAssassin.SetActive(active);
+                break;
+
+            case DroidSelect.Droids.Pendroid:
+                droidPendroid.SetActive(active);
+                break;
+
         }
     }
 }
