@@ -45,7 +45,7 @@ public class Hover : MonoBehaviour
                             if (DroidSelect.Instance.selectedDroid != Droids.none)
                             {
                                 rowStarts[i].SetActive(true);
-                                droidHolder.transform.position = new Vector3(rowStarts[i].transform.position.x, rowStarts[i].transform.position.y + 2, 0);
+                                droidHolder.transform.position = new Vector3(rowStarts[i].transform.position.x, rowStarts[i].transform.position.y + 1, 0);
                                 SelectSprite(DroidSelect.Instance.selectedDroid, true);
                             }
 
