@@ -19,8 +19,10 @@ public class DroidPlace : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 Vector2 touchPosition = touch.position;
-                Debug.Log(touchPosition);
-                if(touchPosition.x < 285)
+                float screenWidthRatio = touchPosition.x / Screen.width;
+                Debug.Log($"Touch position ratio: {screenWidthRatio}");
+                
+                if(screenWidthRatio < 0.3f) // A képernyő bal 30%-át kizárjuk
                 {
                     return;
                 }

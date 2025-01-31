@@ -6,7 +6,8 @@ using UnityEngine.Tilemaps;
 using System.Linq;
 using static DroidSelect;
 
-public class Hover : MonoBehaviour {
+public class Hover : MonoBehaviour
+{
     // Start is called before the first frame update
 
     public Tilemap tilemap;
@@ -20,7 +21,7 @@ public class Hover : MonoBehaviour {
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,12 +29,12 @@ public class Hover : MonoBehaviour {
     {
         if (Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0);            
+            Touch touch = Input.GetTouch(0);
             Vector3Int cell = tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(touch.position));
-            int[] validY = {2, 0, -2, -4};
-            if(cell != null)
+            int[] validY = { 2, 0, -2, -4 };
+            if (cell != null)
             {
-                if(validY.Contains(cell.y))
+                if (validY.Contains(cell.y))
                 {
                     int index = validY.ToList().IndexOf(cell.y);
                     Debug.Log(index);
@@ -44,7 +45,8 @@ public class Hover : MonoBehaviour {
                             if (DroidSelect.Instance.selectedDroid != Droids.none)
                             {
                                 rowStarts[i].SetActive(true);
-                                droidHolder.transform.position = rowStarts[i].transform.position;
+                                droidHolder.transform.position = new Vector3(rowStarts[i].transform.position.x, rowStarts[i].transform.position.y + 2, 0);
+                                SelectSprite(DroidSelect.Instance.selectedDroid, true);
                             }
 
                         }
@@ -54,18 +56,23 @@ public class Hover : MonoBehaviour {
                         }
                     }
 
-                    if(touch.phase == TouchPhase.Ended)
+                    if (touch.phase == TouchPhase.Ended)
                     {
-                        for(int i = 0; i < rowStarts.Length; i++)
+                        for (int i = 0; i < rowStarts.Length; i++)
                         {
                             rowStarts[i].SetActive(false);
                         }
-
+                        SelectSprite(DroidSelect.Instance.selectedDroid, false);
 
                     }
 
                 }
             }
+        }
+        else
+        {
+            SelectSprite(DroidSelect.Instance.selectedDroid, false);
+
         }
     }
 
@@ -75,14 +82,26 @@ public class Hover : MonoBehaviour {
         {
             case DroidSelect.Droids.Melee:
                 droidMelee.SetActive(active);
+                droidAssassin.SetActive(false);
+                droidRanged.SetActive(false);
+                droidTank.SetActive(false);
+                droidPendroid.SetActive(false);
                 break;
 
             case DroidSelect.Droids.Range:
                 droidRanged.SetActive(active);
+                droidMelee.SetActive(false);
+                droidAssassin.SetActive(false);
+                droidTank.SetActive(false);
+                droidPendroid.SetActive(false);
                 break;
 
             case DroidSelect.Droids.Tank:
                 droidTank.SetActive(active);
+                droidMelee.SetActive(false);
+                droidAssassin.SetActive(false);
+                droidRanged.SetActive(false);
+                droidPendroid.SetActive(false);
                 break;
 
             case DroidSelect.Droids.Assassin:
