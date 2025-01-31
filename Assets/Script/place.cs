@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
-public class towerTile {
+public class towerTile
+{
     public string name;
     public TileBase tile;
 
-    public towerTile(string name, TileBase tile) {
+    public towerTile(string name, TileBase tile)
+    {
         this.name = name;
         this.tile = tile;
     }
 }
 
-public class towertype {
+public class towertype
+{
     public string name;
     public int cost;
     public int range;
@@ -23,7 +26,8 @@ public class towertype {
     public towerTile tile;
     public Sprite projectile;
 
-    public towertype(string name, int cost, int range, int damage, int speed, towerTile tile, Sprite projectile) {
+    public towertype(string name, int cost, int range, int damage, int speed, towerTile tile, Sprite projectile)
+    {
         this.name = name;
         this.cost = cost;
         this.range = range;
@@ -34,14 +38,16 @@ public class towertype {
     }
 }
 
-public class tower {
+public class tower
+{
     public int x;
     public int y;
     public int z;
 
     public towertype type;
 
-    public tower(int x, int y, int z, towertype type) {
+    public tower(int x, int y, int z, towertype type)
+    {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -71,6 +77,6 @@ public class place : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
