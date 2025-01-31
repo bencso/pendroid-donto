@@ -92,6 +92,7 @@ public class Hover : MonoBehaviour
                         {
                             newDroid.SetActive(true);
                             newDroid.AddComponent<DroidManager>();
+                            place.Instance.addAttackUnit(cell.x, cell.y, cell.z, DroidSelect.Instance.selectedDroid);
                         }
                     }
 

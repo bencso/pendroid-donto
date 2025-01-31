@@ -99,6 +99,8 @@ public class place : MonoBehaviour
 
     public int rowLength = 14;
 
+    public static place Instance;
+
     public List<towertype> attackTowers = new List<towertype>();
 
     private List<tower> towers = new List<tower>();
@@ -107,16 +109,18 @@ public class place : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         Debug.Log("place");
         // towertype towerType = new towertype("test", 100, 110, 10, 10, 1, 1, new towerTile("test", towerTile), projectile);
-        attackTowers.Add(new towertype("ranged", 100, 110, 4, 4, 6, 4, new towerTile("test", towerTile), projectile));
-        attackTowers.Add(new towertype("fast", 100, 150, 1, 5, 1, 5, new towerTile("test", towerTile), projectile));
-        attackTowers.Add(new towertype("strong", 100, 200, 10, 3, 1, 1, new towerTile("test", towerTile), projectile));
+        attackTowers.Add(new towertype("Melee", 100, 110, 4, 4, 6, 4, new towerTile("test", towerTile), projectile));
+        attackTowers.Add(new towertype("Range", 100, 150, 1, 5, 1, 5, new towerTile("test", towerTile), projectile));
+        attackTowers.Add(new towertype("Tank", 100, 200, 10, 3, 1, 1, new towerTile("test", towerTile), projectile));
+        attackTowers.Add(new towertype("Assassin", 100, 200, 10, 3, 1, 1, new towerTile("test", towerTile), projectile));
+        attackTowers.Add(new towertype("Pendroid", 100, 200, 10, 3, 1, 1, new towerTile("test", towerTile), projectile));
         tower tower = new tower(0, 0, 0, attackTowers[Random.Range(0, attackTowers.Count)]);
         towers.Add(tower);
 
         Debug.Log(towers[0].type.name);
-        startRound();
         List<int> usedrows = attackUnits.Select(unit => unit.y).Distinct().ToList();
         foreach (var row in usedrows)
         {
@@ -144,42 +148,51 @@ public class place : MonoBehaviour
         Debug.Log(towers.Count);
     }
 
-    public List<towertype> GenerateRandomAttackUnits(int count = 3)
-    {
-        List<towertype> units = new List<towertype>();
-        string[] unitNames = { "Gyors", "Erős", "Távolsági" };
-
-        for (int i = 0; i < count; i++)
-        {
-            int cost = Random.Range(20, 81);  // 20-80 közötti költség
-            int range = Random.Range(1, 4);  // 3-12 közötti hatótáv
-            int damage = Random.Range(5, 21); // 5-30 közötti sebzés
-            int speed = Random.Range(5, 10);  // 5-15 közötti sebesség
-            int attackSpeed = Random.Range(1, 5);  // 1-5 közötti támadási sebesség
-            int hp = Random.Range(100, 201);  // 100-200 közötti HP
-
-            towertype unit = new towertype(
-                unitNames[i],
-                cost,
-                hp,
-                range,
-                damage,
-                attackSpeed,
-                speed,
-                new towerTile(unitNames[i], towerTile),
-                projectile
-            );
-
-            units.Add(unit);
-        }
-
-        return units;
+   public void addAttackUnit(int x, int y, int z, DroidSelect.Droids droid) {
+    switch (droid) {    
+        case DroidSelect.Droids.Melee:
+            attackUnits.Add(new attackUnit(x, y, z, attackTowers[0]));
+            break;
+        case DroidSelect.Droids.Range:
+            attackUnits.Add(new attackUnit(x, y, z, attackTowers[1]));
+            break;
+        case DroidSelect.Droids.Tank:
+            attackUnits.Add(new attackUnit(x, y, z, attackTowers[2]));
+            break;
+        case DroidSelect.Droids.Assassin:
+            attackUnits.Add(new attackUnit(x, y, z, attackTowers[3]));
+            break;
+        case DroidSelect.Droids.Pendroid:
+            attackUnits.Add(new attackUnit(x, y, z, attackTowers[4]));
+            break;
     }
+    GenerateDefenseTowers(attackUnits);
+            Debug.Log(towers[0].type.name);
+        List<int> usedrows = attackUnits.Select(unit => unit.y).Distinct().ToList();
+        foreach (var row in usedrows)
+        {
+            var defenseTowers = GenerateDefenseTowers(attackUnits.Where(unit => unit.y == row).ToList());
+            foreach (var defenseTower in defenseTowers)
+            {
+                {
+                    var towersinrow = towers.Where(t => t.y == row);
+                    if (towersinrow.Count() == 0)
+                    {
+                        towers.Add(new tower(rowLength - 1, row, 0, defenseTower));
+                    }
+                    else
+                    {
+                        towers.Add(new tower(rowLength - (towersinrow.Count() + 1), row, 0, defenseTower));
+                    }
+            }
+        }
+        }
+   }
 
     private List<towertype> GenerateDefenseTowers(List<attackUnit> enemyUnits)
     {
         List<towertype> defenseTowers = new List<towertype>();
-
+        Debug.Log($"enemyUnits.Count: {enemyUnits.Count}");
         // Statisztikák számítása az ellenséges egységekről
         float avgDamage = 0;
         float avgSpeed = 0;
@@ -273,7 +286,8 @@ public class place : MonoBehaviour
 
 
         // Generáljuk a random egységeket
-        List<towertype> randomUnits = GenerateRandomAttackUnits(attackUnitCount);
+        // List<towertype> randomUnits = GenerateRandomAttackUnits(attackUnitCount);
+        List<towertype> randomUnits = attackTowers;
         Dictionary<int, int> unitCount = new Dictionary<int, int>();
         unitCount.Add(1, 0);
         unitCount.Add(2, 0);
