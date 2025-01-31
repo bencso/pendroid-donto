@@ -19,9 +19,11 @@ public class Hover : MonoBehaviour
     public GameObject droidAssassin;
     public GameObject droidPendroid;
 
+    public DroidManager droidManager;
+
     void Start()
     {
-
+        Debug.Log(droidHolder.transform.position);
     }
 
     // Update is called once per frame
@@ -63,7 +65,33 @@ public class Hover : MonoBehaviour
                             rowStarts[i].SetActive(false);
                         }
                         SelectSprite(DroidSelect.Instance.selectedDroid, false);
-
+                        
+                        // Új droid létrehozása a kiválasztott pozícióban
+                        GameObject newDroid = null;
+                        switch (DroidSelect.Instance.selectedDroid)
+                        {
+                            case DroidSelect.Droids.Melee:
+                                newDroid = Instantiate(droidMelee, droidHolder.transform.position, Quaternion.identity);
+                                break;
+                            case DroidSelect.Droids.Range:
+                                newDroid = Instantiate(droidRanged, droidHolder.transform.position, Quaternion.identity);
+                                break;
+                            case DroidSelect.Droids.Tank:
+                                newDroid = Instantiate(droidTank, droidHolder.transform.position, Quaternion.identity);
+                                break;
+                            case DroidSelect.Droids.Assassin:
+                                newDroid = Instantiate(droidAssassin, droidHolder.transform.position, Quaternion.identity);
+                                break;
+                            case DroidSelect.Droids.Pendroid:
+                                newDroid = Instantiate(droidPendroid, droidHolder.transform.position, Quaternion.identity);
+                                break;
+                        }
+                        
+                        if (newDroid != null)
+                        {
+                            newDroid.SetActive(true);
+                            newDroid.AddComponent<DroidManager>();
+                        }
                     }
 
                 }
