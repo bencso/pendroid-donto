@@ -5335,8 +5335,13 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1901531763
 GameObject:
+=======
+--- !u!114 &1831699928
+MonoBehaviour:
+>>>>>>> Stashed changes
 =======
 --- !u!114 &1831699928
 MonoBehaviour:
@@ -5345,6 +5350,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
@@ -5509,6 +5515,8 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1831699926}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5519,6 +5527,9 @@ SpriteRenderer:
   droidSprites: {fileID: 0}
   droids: []
   gameTerrain: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
