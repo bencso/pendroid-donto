@@ -50,7 +50,7 @@ Ez egy lezárt verseny projekt, amely csapatmunkában készült a PenDroid verse
 
 ---
 
-**Státusz:** ✅ Befejezett (Verseny projekt - 3. helyezés)
+**Státusz:** ✅ Befejezett
 
 ---
 
