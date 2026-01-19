@@ -44,10 +44,6 @@ A projekt során gyakoroltuk:
 - Csapatmunka stresszes helyzetekben
 - Időmenedzsment versenyhelyzetben
 
-## 📄 Licensz
-
-MIT License - Szabadon használható és módosítható
-
 ---
 
 **Státusz:** ✅ Befejezett
