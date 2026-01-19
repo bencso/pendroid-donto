@@ -8,7 +8,7 @@ Ez a projekt a [PenDroid 2025 döntő](https://pendroid.uni-pannon.hu/verseny/hi
 
 ## 🏆 Eredmény
 
-**3. helyezés** -[PenDroid 2025 döntő](https://pendroid.uni-pannon.hu/verseny/hirek?view=article&id=219:veget-ert-a-pendroid-2025-os-dontoje&catid=48)
+**3. helyezés** - [PenDroid 2025 döntő](https://pendroid.uni-pannon.hu/verseny/hirek?view=article&id=219:veget-ert-a-pendroid-2025-os-dontoje&catid=48)
 
 ## 👥 Csapattagok
 
