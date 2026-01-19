@@ -16,7 +16,7 @@ Ez a projekt a PenDroid verseny döntőjének keretében készült, ahol a felad
 
 - **bencso** - [GitHub](https://github.com/bencso)
 - **Katona Roland** - [GitHub](https://github.com/katroland)
-- **Gyurkovics Dominik Ádám** (UI készítője) - [GitHub](https://github.com/gydoma)
+- **Gyurkovics Dominik** (UI készítője) - [GitHub](https://github.com/gydoma)
 - **Trixep** - [GitHub](https://github.com/Trixep)
 
 ## ✨ Funkciók
