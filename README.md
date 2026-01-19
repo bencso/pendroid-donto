@@ -1,4 +1,4 @@
-# pendroid-donto 🏆🎮
+# MI - PENdroid döntő 🏆🎮
 
 > Plants vs Zombies stílusú játék - PenDroid verseny döntő
 
