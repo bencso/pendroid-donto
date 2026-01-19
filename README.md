@@ -14,10 +14,10 @@ Ez a projekt a [PenDroid 2025 döntő](https://pendroid.uni-pannon.hu/verseny/hi
 
 **Csapatnév:** new_project
 
-- **bencso** - [GitHub](https://github.com/bencso)
+- **Bábolnai Bence** - [GitHub](https://github.com/bencso)
 - **Katona Roland** - [GitHub](https://github.com/katroland)
-- **Gyurkovics Dominik** (UI készítője) - [GitHub](https://github.com/gydoma)
-- **Trixep** - [GitHub](https://github.com/Trixep)
+- **Gyurkovics Dominik** - [GitHub](https://github.com/gydoma)
+- **Horváth Péter** - [GitHub](https://github.com/Trixep)
 
 ## ✨ Funkciók
 
@@ -44,9 +44,9 @@ A projekt során gyakoroltuk:
 - Csapatmunka stresszes helyzetekben
 - Időmenedzsment versenyhelyzetben
 
-## 🤝 Közreműködés
+## 📄 Licensz
 
-Ez egy lezárt verseny projekt.
+MIT License - Szabadon használható és módosítható
 
 ---
 
