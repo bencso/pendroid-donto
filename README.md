@@ -4,11 +4,11 @@
 
 ## 🎯 Projekt célja
 
-Ez a projekt a PenDroid verseny döntőjének keretében készült, ahol a feladat egy AI vs Ember koncepciót megvalósító játék volt. Egy Plants vs Zombies stílusú tower defense játékot fejlesztettünk Unity Engine segítségével.
+Ez a projekt a [PenDroid 2025 döntő](https://pendroid.uni-pannon.hu/verseny/hirek?view=article&id=219:veget-ert-a-pendroid-2025-os-dontoje&catid=48) keretében készült, ahol a feladat egy AI vs Ember koncepciót megvalósító játék volt. Egy Plants vs Zombies stílusú tower defense játékot fejlesztettünk Unity Engine segítségével.
 
 ## 🏆 Eredmény
 
-**3. helyezés** - PenDroid verseny döntő
+[PenDroid 2025 döntő](https://pendroid.uni-pannon.hu/verseny/hirek?view=article&id=219:veget-ert-a-pendroid-2025-os-dontoje&catid=48)
 
 ## 👥 Csapattagok
 
